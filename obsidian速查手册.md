@@ -26,6 +26,7 @@ tags:
 
 ## 白板
 - 可以用来制作关系图
+
 ## Markdown语法速查
 [[Markdown 基本语法 | Markdown 教程](https://markdown.com.cn/basic-syntax/)]
 
