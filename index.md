@@ -5,3 +5,4 @@
 
 ## Python
 <a href="./Python/1.开始.html">[[1.开始]]</a>
+<a href="./Python/2.数据类型.html">[[2.数据类型]]</a>
