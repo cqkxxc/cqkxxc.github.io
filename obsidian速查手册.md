@@ -30,3 +30,6 @@ tags:
 ## Markdown语法速查
 [[Markdown 基本语法 | Markdown 教程](https://markdown.com.cn/basic-syntax/)]
 
+[基本语法 | MARKDOWN 中文](https://markdown.cn/docs/tutorial-basics/basic-syntax/)
+### 制表器
+[Markdown 表格 编辑和生成器 - 在线表格转换工具](https://tableconvert.com/zh-cn/markdown-generator)
