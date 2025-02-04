@@ -9,3 +9,5 @@
 
 ## power automate
 <a href="./Power Automate/速记.html">[[速记]]</a><br>
+
+<a href="./3.7日活动草案.html">[[3.7日活动草案]]</a><br>
