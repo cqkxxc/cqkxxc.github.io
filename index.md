@@ -10,4 +10,4 @@
 ## power automate
 <a href="./Power Automate/速记.html">[[速记]]</a><br>
 
-<a href="./3.7日活动草案.html">[[3.7日活动草案]]</a><br>
+<a href="./IT技术服务内容.html">[[IT技术服务内容]]</a><br>
