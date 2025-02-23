@@ -8,6 +8,7 @@
 <a href="./Python/2.数据类型.html">[[2.数据类型]]</a><br>
 <a href="./Python/3.运算和Tuthy、Falsy值.html">[[3.运算和Tuthy、Falsy值]]</a><br>
 <a href="./Python/4.控制流.html">[[4.控制流]]</a><br>
+<a href="./Python/5.函数和方法.html">[[5.函数和方法]]</a><br>
 ## power automate
 <a href="./Power Automate/速记.html">[[速记]]</a><br>
 
