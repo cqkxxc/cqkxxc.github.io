@@ -10,6 +10,8 @@
 <a href="./Python/4.控制流.html">[[4.控制流]]</a><br>
 <a href="./Python/5.函数和方法.html">[[5.函数和方法]]</a><br>
 <a href="./Python/6.混杂信息.html">[[6.混杂信息]]</a><br>
+<a href="./Python/7.IO.html">[[7.IO]]</a><br>
+<a href="./Python/8.OOP.html">[[8.OOP]]</a><br>
 ## power automate
 <a href="./Power Automate/速记.html">[[速记]]</a><br>
 
