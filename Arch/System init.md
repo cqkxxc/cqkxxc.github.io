@@ -5,10 +5,8 @@ sudo nano /etc/pacman.d/mirrorlist
 
 #清华源
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
-
 #阿里源
 Server = http://mirrors.aliyun.com/archlinux/$repo/os/$arch
-
 #中科大源
 Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 
@@ -20,12 +18,9 @@ Server = https://mirrors.ustc.edu.cn/archlinux/$repo/os/$arch
 sudo nano /etc/pacman.conf
 
 [archlinuxcn]
-
 SigLevel = Optional TrustedOnly
-
 #清华源
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinuxcn/$arch
-
 #中科大源
 Server = https://mirrors.ustc.edu.cn/archlinuxcn/$arch
 #阿里源
