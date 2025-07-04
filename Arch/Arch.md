@@ -16,6 +16,7 @@ wayland引起，实测通过此官方文档解决问题：https://fcitx-im.org/w
 
 竟然是在刷B站视频时在评论区有人说有官方文档提供解决方法，又是感谢互联网精神的一天
 
+3.Obsidian
 常用命令
 1.系统更新：sudo pacman -Syu
 2.查找软件包：sudo pacman -Ss 软件名
