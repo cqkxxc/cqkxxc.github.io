@@ -50,10 +50,15 @@ sudo nano /etc/locale.gen
 把以下内容前的#去掉
 
 zh_CN.UTF-8 UTF-8
+
 su
+
 locale-gen && echo 'LANG=zh_CN.UTF-8' > /etc/locale.conf
+
 exit
+
 System Settings->Region & Language->Language->Modify->Change Language->简体中文
+
 
 （3）安装自己喜欢的字体（可选）
 
