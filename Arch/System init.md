@@ -1,6 +1,7 @@
 1、换源
 （1）换国内镜像源
 sudo nano /etc/pacman.d/mirrorlist
+
 #清华源
 Server = https://mirrors.tuna.tsinghua.edu.cn/archlinux/$repo/os/$arch
 #阿里源
