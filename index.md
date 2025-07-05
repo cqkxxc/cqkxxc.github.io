@@ -1,3 +1,5 @@
+# 首页
+
 ## 杂谈
 
 <a href="./杂记/obsidian速查手册.html">[[obsidian速查手册|obsidian]]</a>
