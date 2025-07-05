@@ -5,9 +5,12 @@
 
 <a href="./杂记/实用软件.html">[[实用软件]]</a>
 ## Arch
-<a href="./Arch/Arch使用日记.html">[[Arch使用日记]]</a><br>
-<a href="./Arch/System init.html">[[System init]]</a><br>
-<a href="./Arch/WSL2体验.html">[[WSL2体验]]</a><br>
+<a href="./Arch/Arch使用日记.html">[[Arch使用日记]]</a>
+
+<a href="./Arch/System init.html">[[System init]]</a>
+
+<a href="./Arch/WSL2体验.html">[[WSL2体验]]</a>
+
 ## Python
 <a href="./Python/1.开始.html">[[1.开始]]</a><br>
 <a href="./Python/2.数据类型.html">[[2.数据类型]]</a><br>
