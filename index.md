@@ -3,7 +3,7 @@
 ## 杂谈
 <a href="./杂记/obsidian速查手册.html">[[obsidian速查手册|obsidian]]</a>
 
-<a href="./杂记/实用软件.html">[[实用App]]</a>
+<a href="./杂记/实用App.html">[[实用App]]</a>
 ## Arch
 <a href="./Arch/Arch使用日记.html">[[Arch使用日记]]</a>
 
