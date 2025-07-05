@@ -4,7 +4,7 @@
 <a href="./obsidian速查手册.html">[[obsidian速查手册|obsidian]]</a>
 
 ## Arch
-<a href="./Arch/Arch.html">[[Arch使用日记]]</a><br>
+<a href="./Arch/Arch使用日记.html">[[Arch使用日记]]</a><br>
 <a href="./Arch/System init.html">[[System init]]</a><br>
 <a href="./Arch/WSL2体验html">[[WSL2体验]]]</a><br>
 ## Python
