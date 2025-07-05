@@ -1,8 +1,9 @@
 # 目录
 
-## 笔记制作
-<a href="./obsidian速查手册.html">[[obsidian速查手册|obsidian]]</a>
+## 杂谈
+<a href="./杂记/obsidian速查手册.html">[[obsidian速查手册|obsidian]]</a>
 
+<a href="./杂记/实用软件.html">[[实用软件]]</a>
 ## Arch
 <a href="./Arch/Arch使用日记.html">[[Arch使用日记]]</a><br>
 <a href="./Arch/System init.html">[[System init]]</a><br>
