@@ -38,4 +38,3 @@
 
 <a href="./Power Automate/速记.html">[[速记]]</a>
 
-<a href="./Excalidraw/海绵阅读法.html">[[海绵阅读法]]</a>
