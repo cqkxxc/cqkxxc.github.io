@@ -9,7 +9,7 @@
 <a href="./IT技术服务内容.html">[[IT技术服务内容]]</a>
 
 # C
-<a href="./C/1.环境配置.html">[[1.环境配置]]</a>
+<a href="./C/1.环境配置和开始.html">[[1.环境配置和开始]]</a>
 ## Arch
 
 <a href="./Arch/Arch使用日记.html">[[Arch使用日记]]</a>
