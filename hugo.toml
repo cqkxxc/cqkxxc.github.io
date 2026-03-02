@@ -1,0 +1,116 @@
+baseURL = 'https://cqkxxc.github.io/'
+languageCode = 'zh-cn'
+defaultContentLanguage = 'zh'
+title = '不吃早饭的个人空间'
+
+theme = 'PaperMod'
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+paginate = 10
+summaryLength = 100
+
+[params]
+  env = 'production'
+  description = '技术笔记、学习总结、随笔'
+  author = '火锅鱼'
+  defaultTheme = 'auto'
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowRssButtonInSectionTermList = true
+  UseHugoToc = true
+  ShowToc = true
+  TocOpen = true
+
+  [params.homeInfoParams]
+    Title = '不吃早饭的个人空间'
+    Content = '梦到哪句写哪句'
+
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/cqkxxc'
+
+[params.editPost]
+  URL = 'https://github.com/cqkxxc/cqkxxc.github.io/tree/main/content'
+  Text = '编辑此页'
+  appendFilePath = true
+
+[menu]
+  [[menu.main]]
+    identifier = 'posts'
+    name = '文章'
+    url = '/posts/'
+    weight = 10
+  [[menu.main]]
+    identifier = 'categories'
+    name = '分类'
+    url = '/categories/'
+    weight = 20
+  [[menu.main]]
+    identifier = 'tags'
+    name = '标签'
+    url = '/tags/'
+    weight = 30
+  [[menu.main]]
+    identifier = 'search'
+    name = '搜索'
+    url = '/search/'
+    weight = 40
+
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      strikethrough = true
+      taskLists = true
+      definitionList = true
+      footnote = true
+      linkify = true
+      table = true
+  [markup.highlight]
+    anchorLineNos = false
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ''
+    hl_inline = false
+    lineAnchors = ''
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    noHl = false
+    style = 'github'
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 4
+    ordered = false
+    startLevel = 2
+
+[frontmatter]
+  lastmod = ['lastmod', ':git', ':fileModTime', 'date', 'publishDate']
+
+[permalinks]
+  posts = '/posts/:year/:month/:slug/'
+
+[minify]
+  disableCSS = false
+  disableHTML = false
+  disableJS = false
+  disableJSON = false
+  disableSVG = false
+  disableXML = false
+  minifyOutput = true
