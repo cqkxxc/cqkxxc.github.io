@@ -1,7 +1,7 @@
 baseURL = 'https://cqkxxc.github.io/'
 languageCode = 'zh-cn'
 defaultContentLanguage = 'zh'
-title = '不吃早饭的个人空间'
+title = '游汤集'
 
 theme = 'PaperMod'
 
@@ -29,7 +29,7 @@ summaryLength = 100
   TocOpen = true
 
   [params.homeInfoParams]
-    Title = '不吃早饭的个人空间'
+    Title = '主页'
     Content = '梦到哪句写哪句'
 
   [[params.socialIcons]]
