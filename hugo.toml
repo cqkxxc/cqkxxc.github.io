@@ -1,7 +1,11 @@
 baseURL = 'https://cqkxxc.github.io/'
 languageCode = 'zh-cn'
 defaultContentLanguage = 'zh'
+<<<<<<< HEAD
 title = '火锅鱼'
+=======
+title = '游汤集'
+>>>>>>> origin/main
 
 theme = 'PaperMod'
 
