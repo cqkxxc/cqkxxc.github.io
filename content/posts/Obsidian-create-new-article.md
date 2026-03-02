@@ -1,7 +1,6 @@
 ---
 title: Obsidian新建笔记的注意事项
 date: 2026-03-02
-draft: true
 tags:
   - 博客
   - obisdian
