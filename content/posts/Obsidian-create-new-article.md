@@ -1,5 +1,5 @@
 ---
-title: Obsidian新建笔记的方法
+title: Obsidian新建笔记的注意事项
 date: 2026-03-02
 draft: true
 categories:
@@ -8,9 +8,12 @@ tags:
   - 博客
 description: 如何在Obsidian新建笔记并上传到githubpage
 ---
-### 用Obsidian写文章
+## 用Obsidian写文章
+
 1. 用Obsidian打开项目目录 R:\TraeProject\GithubPages
+
 2. 在 content/posts/ 下创建新markdown文件
+
 3. 文件开头添加front matter ：
 ```
 ---
@@ -24,7 +27,29 @@ description: "文章简介"
 
 ## 正文开始...
 ```
+
 4. 保存后执行部署脚本 ：
-5. ```
-   .\deploy.ps1
-   ```
+
+```
+.\deploy.ps1
+```
+
+## 注：
+
+只有 --- 包围的front matter区块是必须的，内容可以为空：
+
+```
+---
+---
+```
+这样也能正常构建，只是文章没有标题、日期等信息。
+
+### 推荐的最简配置
+
+```
+---
+title: "文章标题"
+---
+```
+
+只有标题就够了，其他都是可选的。
