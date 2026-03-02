@@ -2,8 +2,6 @@
 title: Hugo博客搭建指南
 date: 2026-03-02
 draft: false
-categories:
-  - 教程
 tags:
   - Hugo
   - 博客

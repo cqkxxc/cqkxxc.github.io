@@ -2,10 +2,9 @@
 title: Obsidian新建笔记的注意事项
 date: 2026-03-02
 draft: true
-categories:
-  - 教程
 tags:
   - 博客
+  - obisdian
 description: 如何在Obsidian新建笔记并上传到githubpage
 ---
 ## 用Obsidian写文章
@@ -53,3 +52,4 @@ title: "文章标题"
 ```
 
 只有标题就够了，其他都是可选的。
+
