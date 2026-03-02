@@ -1,9 +1,9 @@
 ---
-title: 文章标题
+title: Obsidian新建笔记的方法
 date: 2026-03-02
 draft: true
 categories:
-  - 技术笔记
+  - 教程
 tags:
   - 博客
 description: 文章简介
