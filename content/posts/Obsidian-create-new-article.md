@@ -5,6 +5,7 @@ tags:
   - 博客
   - obisdian
 description: 如何在Obsidian新建笔记并上传到githubpage
+categories: obisdian使用指南
 ---
 ## 用Obsidian写文章
 

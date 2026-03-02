@@ -6,6 +6,7 @@ tags:
   - Hugo
   - 博客
 description: 详细介绍如何使用Hugo搭建个人博客并部署到GitHub Pages。
+categories: HUGO快速开始
 ---
 
 ## 为什么选择Hugo
