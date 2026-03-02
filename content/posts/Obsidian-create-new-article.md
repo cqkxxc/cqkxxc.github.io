@@ -6,6 +6,7 @@ tags:
   - obisdian
 description: 如何在Obsidian新建笔记并上传到githubpage
 categories: obisdian使用指南
+draft: true
 ---
 ## 用Obsidian写文章
 
