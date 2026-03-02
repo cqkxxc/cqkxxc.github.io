@@ -6,7 +6,7 @@ categories:
   - 教程
 tags:
   - 博客
-description: 文章简介
+description: 如何在Obsidian新建笔记并上传到githubpage
 ---
 ### 用Obsidian写文章
 1. 用Obsidian打开项目目录 R:\TraeProject\GithubPages
