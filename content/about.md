@@ -1,6 +1,6 @@
 ---
-title: "关于"
-date: 2024-01-01
+title: 关于
+date: 2026-03-02
 draft: false
 ---
 
@@ -18,4 +18,4 @@ draft: false
 
 ## 联系方式
 
-- GitHub: [yourusername](https://github.com/yourusername)
+- 保密

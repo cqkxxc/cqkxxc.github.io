@@ -1,10 +1,13 @@
 ---
-title: "Hugo博客搭建指南"
-date: 2024-01-10
+title: Hugo博客搭建指南
+date: 2026-03-02
 draft: false
-categories: ["技术笔记"]
-tags: ["Hugo", "博客", "GitHub Pages"]
-description: "详细介绍如何使用Hugo搭建个人博客并部署到GitHub Pages。"
+categories:
+  - 技术笔记
+tags:
+  - Hugo
+  - 博客
+description: 详细介绍如何使用Hugo搭建个人博客并部署到GitHub Pages。
 ---
 
 ## 为什么选择Hugo
