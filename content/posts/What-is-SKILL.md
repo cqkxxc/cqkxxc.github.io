@@ -6,7 +6,7 @@ tags:
   - SKILL
   - AI
 description: 介绍
-categories: AI
+categories: 大概介绍一下SKILL技术
 ---
 > 本文约 **3000** 字，预计阅读时间 **8-10**分钟。
 

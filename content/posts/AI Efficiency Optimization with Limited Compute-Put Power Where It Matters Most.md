@@ -7,7 +7,7 @@ tags:
   - SKILL
   - RAG
   - AgenticRAG
-description: 介绍
+description: 一些心得体会
 categories: AI
 ---
 > 本文约 **4500** 字，预计阅读时间 **10-12** 分钟。
