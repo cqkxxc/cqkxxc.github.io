@@ -5,8 +5,8 @@ draft: false
 tags:
   - SKILL
   - AI
-description: 介绍
-categories: 大概介绍一下SKILL技术
+description: 大概介绍一下SKILL技术
+categories: AI
 ---
 > 本文约 **3000** 字，预计阅读时间 **8-10**分钟。
 
