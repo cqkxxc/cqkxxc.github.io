@@ -23,8 +23,7 @@
     function updateTocVisibility() {
       if (!inlineToc) {
         // 如果没有内联目录，始终显示右侧目录
-        tocContainer.style.opacity = '1';
-        tocContainer.style.visibility = 'visible';
+        tocContainer.classList.add('visible');
         return;
       }
 
@@ -33,16 +32,13 @@
       
       // 当内联目录完全滚出视口时，显示右侧目录
       if (inlineTocBottom < 0) {
-        tocContainer.style.opacity = '1';
-        tocContainer.style.visibility = 'visible';
+        tocContainer.classList.add('visible');
       } else {
-        tocContainer.style.opacity = '0';
-        tocContainer.style.visibility = 'hidden';
+        tocContainer.classList.remove('visible');
       }
     }
 
     // 初始化状态
-    tocContainer.style.transition = 'opacity 0.3s ease, visibility 0.3s ease';
     updateTocVisibility();
 
     // 滚动时更新可见性
