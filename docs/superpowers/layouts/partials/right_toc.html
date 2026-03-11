@@ -1,0 +1,9 @@
+{{- $toc := .TableOfContents -}}
+{{- if and $toc (in $toc "<li>") -}}
+<div class="right-toc">
+  <div class="right-toc-inner">
+    <p class="right-toc-title">目录</p>
+    {{ $toc | safeHTML }}
+  </div>
+</div>
+{{- end -}}
