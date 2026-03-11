@@ -129,6 +129,8 @@
     tocLinks.forEach(link => {
       link.addEventListener('click', function(e) {
         e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
         const href = this.getAttribute('href');
         if (!href || !href.startsWith('#')) return;
         
