@@ -3,10 +3,9 @@ title: 我是如何活用 Claude Code 全部功能的
 date: 2026-03-11
 draft: false
 tags:
-  - AI
   - Claude-Code
 description: 使用 Claude Code 的各类方法整理
-categories: AI
+categories: Claude Code
 ---
 原文链接：[How I Use Every Claude Code Feature - by Shrivu Shankar](https://blog.sshh.io/p/how-i-use-every-claude-code-feature)
 
