@@ -46,7 +46,6 @@ categories: AI
 
 以下是一份简化的文件示例：
 
-plaintext
 
 ```
 # 单体仓库
