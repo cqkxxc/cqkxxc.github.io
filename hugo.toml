@@ -3,6 +3,7 @@ languageCode = 'zh-cn'
 defaultContentLanguage = 'zh'
 title = '游汤集'
 theme = 'PaperMod'
+hugoEnvironment = 'production'
 enableRobotsTXT = true
 buildDrafts = false
 buildExpired = false

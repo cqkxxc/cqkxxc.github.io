@@ -1,0 +1,121 @@
+/* 右侧 TOC 容器 - 固定定位，不占用文档流 */
+.right-toc-container {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .right-toc-container {
+    display: block;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    width: 260px;
+    max-height: calc(100vh - 140px);
+    z-index: 100;
+  }
+}
+
+/* TOC 内部容器 */
+.right-toc {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+
+/* 隐藏滚动条但保持功能 */
+.right-toc::-webkit-scrollbar {
+  width: 4px;
+}
+
+.right-toc::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.right-toc::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 2px;
+}
+
+/* TOC 标题 */
+.right-toc h2 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0 0 0.75rem 0;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* TOC 列表 */
+.right-toc ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.right-toc li {
+  margin: 0;
+  padding: 0;
+}
+
+/* TOC 链接 */
+.right-toc a {
+  display: block;
+  padding: 0.35rem 0;
+  font-size: 13px;
+  line-height: 1.4;
+  color: var(--secondary);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  padding-left: 0.75rem;
+  transition: all 0.2s ease;
+}
+
+.right-toc a:hover {
+  color: var(--primary);
+  border-left-color: var(--secondary);
+}
+
+/* TOC 层级缩进 */
+.right-toc ul ul a {
+  padding-left: 1.5rem;
+  font-size: 12px;
+}
+
+.right-toc ul ul ul a {
+  padding-left: 2.25rem;
+  font-size: 12px;
+}
+
+/* 当前活动项 */
+.right-toc a.active {
+  color: var(--primary);
+  border-left-color: var(--primary);
+  font-weight: 500;
+}
+
+/* 暗色主题适配 */
+[data-theme="dark"] .right-toc {
+  background: var(--entry);
+}
+
+[data-theme="dark"] .right-toc a:hover {
+  border-left-color: var(--secondary);
+}
+
+[data-theme="dark"] .right-toc a.active {
+  border-left-color: var(--primary);
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 确保锚点偏移不被固定头部遮挡 */
+:target {
+  scroll-margin-top: 80px;
+}
