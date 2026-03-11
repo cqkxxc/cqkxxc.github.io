@@ -10,7 +10,7 @@ categories: AI
 ---
 原文链接：[How I Use Every Claude Code Feature - by Shrivu Shankar](https://blog.sshh.io/p/how-i-use-every-claude-code-feature)
 
-作者：施里武・尚卡尔
+作者：[Shrivu Shankar](https://substack.com/@shrivu?utm_source=byline)
 
 2025 年 11 月 2 日
 
