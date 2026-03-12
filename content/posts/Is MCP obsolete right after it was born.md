@@ -363,7 +363,7 @@ Notion、Figma、Linear的用户粘性不在"功能"，而在"数据和工作流
 
 **🔒 用户的数据主权意识**
 
-用户可能不希望所有数据都经过OpenAI。
+用户可能不希望所有数据都经过LLM厂商。
 
 企业有敏感的商业数据，个人有隐私顾虑，某些行业（金融、医疗、政府）还有合规要求——数据不能出境。
 
@@ -399,5 +399,5 @@ MCP面临的不是"过时"问题，而是**"能否成为标准"**的问题。
 ## 参考链接
 
 - [MCP官方文档](https://modelcontextprotocol.io)
-- [CVE-2025-6514安全公告（JFrog](https://jfrog.com/blog/2025-6514-critical-mcp-remote-rce-vulnerability)
+- [CVE-2025-6514安全公告(JFrog)](https://jfrog.com/blog/2025-6514-critical-mcp-remote-rce-vulnerability)
 - [A2A协议规范（Google，2025）](https://github.com/google/A2A)
