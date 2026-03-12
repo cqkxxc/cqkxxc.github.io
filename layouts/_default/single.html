@@ -57,7 +57,8 @@
     {{- end }}
   </footer>
 
-  {{- if (.Param "comments") }}
+  {{- $commentsEnabled := (.Param "comments") | default true }}
+  {{- if $commentsEnabled }}
   {{- partial "comments.html" . }}
   {{- end }}
 </article>

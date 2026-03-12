@@ -1,0 +1,6 @@
+{{- /* Comments area start */ -}}
+{{- $commentsEnabled := (.Param "comments") | default true }}
+{{- if $commentsEnabled }}
+{{- partial "giscus.html" . }}
+{{- end }}
+{{- /* Comments area end */ -}}
