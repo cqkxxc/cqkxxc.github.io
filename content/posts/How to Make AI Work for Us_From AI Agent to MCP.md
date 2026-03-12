@@ -5,6 +5,8 @@ draft: false
 tags:
   - AI
   - MCP
+  - Agent
+  - LLM
 description: 本文大概介绍了AI AGENT和MCP
 categories: AI
 ---

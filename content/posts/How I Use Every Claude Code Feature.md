@@ -4,6 +4,10 @@ date: 2026-03-11
 draft: false
 tags:
   - Claude-Code
+  - Agent
+  - AI
+  - MCP
+  - SKILL
 description: 使用 Claude Code 的各类方法整理
 categories: Claude Code
 ---

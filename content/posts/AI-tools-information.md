@@ -3,6 +3,7 @@ title: AI编程工具入门指南
 date: 2026-03-02
 tags:
   - AI
+  - Agent
 description: 如何选择适合自己的AI工具
 categories: AI
 ---

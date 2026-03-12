@@ -5,6 +5,7 @@ draft: false
 tags:
   - SKILL
   - AI
+  - Agent
 description: 大概介绍一下SKILL技术
 categories: AI
 ---
