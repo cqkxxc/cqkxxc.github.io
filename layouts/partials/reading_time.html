@@ -1,0 +1,35 @@
+{{- /*
+  自定义阅读时间计算 partial
+  针对中文内容进行优化，按中文字符数计算阅读时间
+  标准中文阅读速度：约 300-400 字/分钟
+*/ -}}
+
+{{- $content := .Content -}}
+{{- $hasCJK := false -}}
+
+{{- /* 统计中文字符数（CJK Unified Ideographs） */ -}}
+{{- $chineseCount := 0 -}}
+{{- $chineseCount = len (findRE "[\u4e00-\u9fff]" $content) -}}
+
+{{- /* 统计英文单词数 */ -}}
+{{- $englishCount := 0 -}}
+{{- $englishCount = len (findRE "[a-zA-Z]+" $content) -}}
+
+{{- /* 计算总阅读字数：中文字符 + 英文单词 */ -}}
+{{- $totalWords := add $chineseCount $englishCount -}}
+
+{{- /* 中文阅读速度：350 字/分钟 */ -}}
+{{- $readingSpeed := 350 -}}
+{{- if site.Params.ReadingSpeed -}}
+  {{- $readingSpeed = site.Params.ReadingSpeed -}}
+{{- end -}}
+
+{{- /* 计算阅读时间（分钟），向上取整 */ -}}
+{{- $readingTime := math.Ceil (div (float $totalWords) (float $readingSpeed)) -}}
+
+{{- /* 至少显示 1 分钟 */ -}}
+{{- if lt $readingTime 1 -}}
+  {{- $readingTime = 1 -}}
+{{- end -}}
+
+{{- return $readingTime -}}

@@ -1,0 +1,19 @@
+{{- /*
+  自定义字数统计 partial
+  针对中文内容进行优化，正确统计中文字符数
+*/ -}}
+
+{{- $content := .Content -}}
+
+{{- /* 统计中文字符数（CJK Unified Ideographs） */ -}}
+{{- $chineseCount := 0 -}}
+{{- $chineseCount = len (findRE "[\u4e00-\u9fff]" $content) -}}
+
+{{- /* 统计英文单词数 */ -}}
+{{- $englishCount := 0 -}}
+{{- $englishCount = len (findRE "[a-zA-Z]+" $content) -}}
+
+{{- /* 计算总字数：中文字符 + 英文单词 */ -}}
+{{- $totalWords := add $chineseCount $englishCount -}}
+
+{{- return $totalWords -}}

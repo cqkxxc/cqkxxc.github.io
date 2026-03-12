@@ -25,6 +25,8 @@ summaryLength = 100
   UseHugoToc = true
   ShowToc = true
   TocOpen = true
+  # 中文阅读速度（字/分钟），用于计算阅读时间
+  ReadingSpeed = 350
 
   [params.homeInfoParams]
     Title = '主页'
