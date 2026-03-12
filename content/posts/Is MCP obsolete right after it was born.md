@@ -371,7 +371,7 @@ Notion、Figma、Linear的用户粘性不在"功能"，而在"数据和工作流
 
 
 
-## 10. 核心判断
+## 结语
 
 **MCP现在过时了吗？**
 
@@ -398,6 +398,6 @@ MCP面临的不是"过时"问题，而是**"能否成为标准"**的问题。
 
 ## 参考链接
 
-- MCP官方文档：https://modelcontextprotocol.io
-- CVE-2025-6514安全公告（JFrog）：https://jfrog.com/blog/2025-6514-critical-mcp-remote-rce-vulnerability
-- A2A协议规范（Google，2025）：https://github.com/google/A2A
+- [MCP官方文档](https://modelcontextprotocol.io)
+- [CVE-2025-6514安全公告（JFrog](https://jfrog.com/blog/2025-6514-critical-mcp-remote-rce-vulnerability)
+- [A2A协议规范（Google，2025）](https://github.com/google/A2A)
