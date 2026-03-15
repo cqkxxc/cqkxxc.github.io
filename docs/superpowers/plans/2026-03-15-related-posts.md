@@ -2,11 +2,11 @@
 
 > **For agentic workers:** REQUIRED: Use superpowers:subagent-driven-development (if subagents available) or superpowers:executing-plans to implement this plan. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** 在文章页面底部展示基于标签和分类的相关文章列表
+**Goal:** 在文章页面底部展示基于 Hugo 原生 Related Content 的相关文章列表
 
-**Architecture:** 纯 Hugo 模板实现，通过自定义算法计算文章相关性分数，在构建时生成静态 HTML
+**Architecture:** 使用 Hugo 内置 Related Content 功能，通过 TOML 配置相关性权重，构建时自动生成相关文章索引
 
-**Tech Stack:** Hugo 模板引擎、PaperMod 主题 CSS 变量
+**Tech Stack:** Hugo Related Content API、PaperMod 主题 CSS 变量
 
 ---
 
@@ -14,63 +14,91 @@
 
 | 文件 | 操作 | 职责 |
 |------|------|------|
-| `layouts/partials/related_posts.html` | 创建 | 相关文章计算与渲染 |
+| `hugo.toml` | 修改 | 添加 Related Content 配置和 ShowRelatedPosts 参数 |
+| `layouts/partials/related_posts.html` | 创建 | 相关文章渲染模板 |
 | `layouts/_default/single.html` | 修改 | 引入 related_posts partial |
 | `assets/css/extended/related_posts.css` | 创建 | 相关文章样式 |
-| `hugo.toml` | 修改 | 添加配置项 |
 
 ---
 
-## Chunk 1: 核心模板实现
+## Chunk 1: 配置与核心模板
 
-### Task 1: 创建 related_posts.html partial
+### Task 1: 添加 Hugo Related Content 配置
+
+**Files:**
+- Modify: `hugo.toml`
+
+- [ ] **Step 1: 在 params 中添加 ShowRelatedPosts 配置**
+
+在 `hugo.toml` 的 `[params]` 部分，在 `ShowRssButtonInSectionTermList` 之后添加：
+
+```toml
+  ShowRelatedPosts = true
+```
+
+- [ ] **Step 2: 在文件末尾添加 [related] 配置**
+
+在 `hugo.toml` 文件末尾添加：
+
+```toml
+[related]
+  includeNewer = true
+  threshold = 60
+  toLower = true
+  
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+    
+  [[related.indices]]
+    name = "categories"
+    weight = 50
+    
+  [[related.indices]]
+    name = "date"
+    weight = 10
+```
+
+- [ ] **Step 3: 验证配置语法**
+
+Run: `hugo config | grep -A 10 "related"`
+
+Expected: 显示 related 配置信息
+
+- [ ] **Step 4: Commit**
+
+```bash
+git add hugo.toml
+git commit -m "feat: add Hugo Related Content configuration"
+```
+
+---
+
+### Task 2: 创建 related_posts.html partial
 
 **Files:**
 - Create: `layouts/partials/related_posts.html`
 
-- [ ] **Step 1: 创建相关文章计算模板**
+- [ ] **Step 1: 创建相关文章渲染模板**
 
 创建文件 `layouts/partials/related_posts.html`：
 
 ```html
-{{- $currentPage := . -}}
-{{- $currentTags := .Params.tags | default (slice) -}}
-{{- $currentCategories := .Params.categories | default (slice) -}}
-{{- $oneYearAgo := now.AddDate -1 0 0 -}}
-
-{{- $related := slice -}}
-
-{{- range $page := where site.RegularPages "Section" "posts" -}}
-  {{- if and (ne $page.Permalink $currentPage.Permalink) (not $page.Draft) -}}
-    {{- $pageTags := $page.Params.tags | default (slice) -}}
-    {{- $pageCategories := $page.Params.categories | default (slice) -}}
-    
-    {{- $tagScore := mul (len (intersect $currentTags $pageTags)) 10 -}}
-    {{- $catScore := cond (gt (len (intersect $currentCategories $pageCategories)) 0) 5 0 -}}
-    {{- $dateScore := cond (gt $page.Date $oneYearAgo) 2 0 -}}
-    
-    {{- $totalScore := add $tagScore $catScore $dateScore -}}
-    
-    {{- if gt $totalScore 0 -}}
-      {{- $related = $related | append (dict "page" $page "score" $totalScore) -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
-
-{{- $related := sort $related "score" "desc" | first 5 -}}
-
+{{- if and (.Param "ShowRelatedPosts") (eq .Section "posts") -}}
+{{- $related := .Site.RegularPages.Related . | first 5 -}}
 {{- with $related -}}
 <section class="related-posts">
   <h3 class="related-posts-title">相关文章</h3>
   <ul class="related-posts-list">
     {{- range . -}}
     <li class="related-posts-item">
-      <a href="{{ .page.Permalink }}" class="related-posts-link">{{ .page.Title }}</a>
-      <span class="related-posts-date">{{ .page.Date.Format "2006-01-02" }}</span>
+      <a href="{{ .Permalink }}" class="related-posts-link">{{ .Title }}</a>
+      <span class="related-posts-date">{{ .Date.Format "2006-01-02" }}</span>
     </li>
     {{- end -}}
   </ul>
 </section>
+{{- end -}}
 {{- end -}}
 ```
 
@@ -84,19 +112,19 @@ Expected: 无模板错误，构建成功
 
 ```bash
 git add layouts/partials/related_posts.html
-git commit -m "feat: add related_posts partial template"
+git commit -m "feat: add related_posts partial using Hugo Related Content"
 ```
 
 ---
 
-### Task 2: 修改 single.html 引入 partial
+### Task 3: 修改 single.html 引入 partial
 
 **Files:**
 - Modify: `layouts/_default/single.html`
 
 - [ ] **Step 1: 在 post-footer 中添加相关文章调用**
 
-在 `layouts/_default/single.html` 中，找到 `post_nav_links.html` 调用位置，在其后添加：
+在 `layouts/_default/single.html` 中，找到 `post_nav_links.html` 调用位置（约第 52 行），在其后添加：
 
 ```html
     {{- if (.Param "ShowRelatedPosts") }}
@@ -104,16 +132,9 @@ git commit -m "feat: add related_posts partial template"
     {{- end }}
 ```
 
-完整上下文（第 50-58 行附近）：
+完整上下文：
 
 ```html
-  <footer class="post-footer">
-    {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
-    <ul class="post-tags">
-      {{- range ($.GetTerms $tags) }}
-      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-      {{- end }}
-    </ul>
     {{- if (.Param "ShowPostNavLinks") }}
     {{- partial "post_nav_links.html" . }}
     {{- end }}
@@ -121,9 +142,6 @@ git commit -m "feat: add related_posts partial template"
     {{- partial "related_posts.html" . }}
     {{- end }}
     {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
-    {{- partial "share_icons.html" . -}}
-    {{- end }}
-  </footer>
 ```
 
 - [ ] **Step 2: 验证构建**
@@ -143,7 +161,7 @@ git commit -m "feat: integrate related_posts into single layout"
 
 ## Chunk 2: 样式实现
 
-### Task 3: 创建样式文件
+### Task 4: 创建样式文件
 
 **Files:**
 - Create: `assets/css/extended/related_posts.css`
@@ -232,37 +250,7 @@ git commit -m "feat: add related_posts styles"
 
 ---
 
-## Chunk 3: 配置与验证
-
-### Task 4: 添加配置项
-
-**Files:**
-- Modify: `hugo.toml`
-
-- [ ] **Step 1: 在 params 中添加配置**
-
-在 `hugo.toml` 的 `[params]` 部分添加：
-
-```toml
-  ShowRelatedPosts = true
-```
-
-位置建议：在 `ShowRssButtonInSectionTermList` 之后
-
-- [ ] **Step 2: 验证配置**
-
-Run: `hugo config | grep ShowRelatedPosts`
-
-Expected: `showrelatedposts = true`
-
-- [ ] **Step 3: Commit**
-
-```bash
-git add hugo.toml
-git commit -m "feat: add ShowRelatedPosts config option"
-```
-
----
+## Chunk 3: 测试与部署
 
 ### Task 5: 本地测试验证
 
@@ -288,7 +276,7 @@ Expected: 服务器启动成功
 
 1. 访问无标签的文章，确认不崩溃
 2. 确认当前文章不在相关文章列表中
-3. 确认草稿文章不在相关文章列表中
+3. 确认无相关文章时不显示区块
 
 ---
 
@@ -320,3 +308,16 @@ Expected: 推送成功，GitHub Actions 触发部署
 - [ ] 样式在亮色/暗色主题下正确
 - [ ] 移动端响应式布局正确
 - [ ] 配置开关生效
+
+---
+
+## 效果监控
+
+上线后需持续监控以下指标：
+
+| 指标 | 目标值 | 数据来源 |
+|------|-------|---------|
+| 点击率 (CTR) | > 3% | Umami |
+| 相关性准确度 | > 80% | 人工抽检 |
+
+若 1 个月后未达标，考虑迁移到自定义算法（方案二）。
