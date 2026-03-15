@@ -6,7 +6,7 @@ tags:
   - AI
   - LLM
 description: 对Kimi、MiniMax、豆包、GPT、Claude进行测试，评估其成本与性能。
-categories: AI
+categories: 会议
 ---
 # 2026.3.9日第一次测试
 
