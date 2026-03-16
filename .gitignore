@@ -7,3 +7,5 @@ Thumbs.db
 *.log
 .obsidian/
 .worktrees/
+.claude/
+.trae/
