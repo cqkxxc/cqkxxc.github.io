@@ -6,8 +6,8 @@ tags:
   - AI
   - Agent
   - LLM
-description:
-categories: AI领域的一些核心概念
+description: AI领域的一些核心概念
+categories: AI
 ---
 ## AI是什么
 
