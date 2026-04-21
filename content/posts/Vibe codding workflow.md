@@ -1,7 +1,7 @@
 ---
 title: vibe codding工作流
 date: 2026-03-31
-draft: true
+draft: false
 tags:
 description: 独立开发者的文档驱动 AI 编程实践
 categories: AI
